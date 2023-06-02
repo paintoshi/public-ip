@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IP</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON("https://api.ipify.org?format=json", function(data) {
+                var ipAddress = data.ip;
+                document.getElementById("ipAddress").textContent = ipAddress;
+                document.getElementById("success").textContent = "Thank you for your cooperation!";
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Your Public IP</h2>
+    <p id="ipAddress">Loading...</p>
+    <p id="success"></p>
+</body>
+</html>
