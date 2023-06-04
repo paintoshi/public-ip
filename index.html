@@ -8,13 +8,14 @@
             $.getJSON("https://api.ipify.org?format=json", function(data) {
                 var ipAddress = data.ip;
                 document.getElementById("ipAddress").textContent = ipAddress;
+                document.getElementById("successHeader").textContent = "Your Public IP";
                 document.getElementById("success").textContent = "Thank you for your cooperation!";
             });
         });
     </script>
 </head>
 <body>
-    <h2>Your Public IP</h2>
+    <p id="successHeader"></p>
     <p id="ipAddress">Loading...</p>
     <p id="success"></p>
 </body>
